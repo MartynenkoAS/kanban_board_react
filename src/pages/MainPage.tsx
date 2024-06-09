@@ -1,5 +1,5 @@
-import React        from "react";
-import BlockDrowing from "../components/BlockDrowing.tsx";
+import React                 from "react";
+import BlockDrowing          from "../components/BlockDrowing.tsx";
 import {mainDataInitialType} from "../types/alltypes.ts";
 
 type PropsType = {mainData: mainDataInitialType[], updateMainDataBacklog, updateMainDataSelect};
