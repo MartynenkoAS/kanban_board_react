@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import "./components/reset.css";
+@import "./components/style.module.css";
+
+.App {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0067A3;
+  color: #FFFFFF;
+  font-size: 28px;
+  height: 55px;
+  padding: 0 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  @media screen and (max-width: 338px) {
+    /* max-width: 338px; */
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+}
+.App-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 64px;
+  height: 40px;
+}
+.App-avatar-logo {
+  cursor: pointer;
+}
+.App-footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  font-size: 18px;
+  @media screen and (max-width: 338px) {
+    font-size: 14px;
+  }
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: #0079BF;
+  color: #000000;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 20px;
+  @media screen and (max-width: 338px) {
+    padding: 50px 10px;
+    height: 100%;
+  }
+}
+
