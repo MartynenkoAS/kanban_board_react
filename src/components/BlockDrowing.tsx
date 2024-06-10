@@ -4,7 +4,7 @@ import CardTitleInput          from "./CardTitleInput.tsx";
 import { Link }                from 'react-router-dom';
 import { mainDataInitialType } from "../types/alltypes.ts";
 
-type PropsType = {mainData: mainDataInitialType, mainDataInitialType, updateMainDataSelect, updateMainDataBacklog, mainDataSelect};
+type PropsType = {mainData: mainDataInitialType, updateMainDataSelect, updateMainDataBacklog, mainDataSelect};
 
 const BlockDrowing = ( props: PropsType ) => {
 
