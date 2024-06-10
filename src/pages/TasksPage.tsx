@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {ChangeEvent, useEffect, useState} from "react";
 import style    from "../components/style.module.css";
 import { Link, useParams }   from 'react-router-dom';
 import {mainDataInitialType} from "../types/alltypes.ts"
@@ -24,8 +24,8 @@ const TasksPage = ( props: PropsType ) => {
     const [editTextToggle,  setEditTextToggle]  = useState(false);
     const edidTextInputShow  = () => {setEditTextToggle(!editTextToggle); saveData(selectTask)}
 
-    const handlerChangeInputTitle = (e) => setSelectTask({type: selectTask.type, id: selectTask.id, title: e.target.value,   text: selectTask.text});
-    const handlerChangeInputText  = (e) => setSelectTask({type: selectTask.type, id: selectTask.id, title: selectTask.title, text: e.target.value});
+    const handlerChangeInputTitle = (e: ChangeEvent<HTMLInputElement>): void => setSelectTask({type: selectTask.type, id: selectTask.id, title: e.target.value,   text: selectTask.text});
+    const handlerChangeInputText  = (e: ChangeEvent<HTMLInputElement>): void => setSelectTask({type: selectTask.type, id: selectTask.id, title: selectTask.title, text: e.target.value});
         
     const saveData = (savedElm) => {                                                 // сохраняем изменения title и text в основном массиве данных
         let newMainData = [...props.mainData];

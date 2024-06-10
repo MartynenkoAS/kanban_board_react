@@ -1,14 +1,10 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import style from "./style.module.css";
-
-
-// updateMainDataBacklog: (type: string, newTasks: mainDataTaskType) => void,
-// updateMainDataSelect: (cardId: string) => void}
 
 const CardTitleInput = (props) => {
     
     const [caseTitle, setCaseTitle] = useState("");
-    const handlerChangeInput  = (e) => setCaseTitle(e.target.value);
+    const handlerChangeInput  = (e: ChangeEvent<HTMLInputElement>):void => setCaseTitle(e.target.value);
     
     function handlerKeyPress(e) {                                   // чтобы можно было ввести title нажав Enter
         if(e.key === 'Enter'){ 
